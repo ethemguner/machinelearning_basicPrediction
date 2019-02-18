@@ -64,7 +64,7 @@ prediction = regressor.predict(x_test)
 
 #stats model p-value - backward elimination
 X = np.append(arr = np.ones((14,1)).astype(int), values = completed_data, axis = 1)
-X_list = completed_data.iloc[:,[0,1,2]].values # 3rd column eliminated from completed_data because p>|t| value was too much. Prediction is more successful now.
+X_list = completed_data.iloc[:,[0,1,2]].values # 3rd column eliminated from completed_data because p>|t| value was too much low. Prediction is more successful now.
 regression_ols = sm.OLS(endog= playDF, exog=X_list).fit()
 
 print(regression_ols.summary())
