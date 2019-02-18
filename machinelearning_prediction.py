@@ -49,8 +49,8 @@ humidityDF = pd.DataFrame(data = humidity, columns = ['humidity'])
 windyDF = pd.DataFrame(data = true_false, columns = ['true', 'false'])
 playDF = pd.DataFrame(data = yes_no, columns = ['yes', 'no'])
 
-windyDF = windyDF.iloc[:,-1] # only 1 column taking (for protect dummy variable.)
-playDF = playDF.iloc[:,-1] # only 1 column taking (for protect dummy variable.)
+windyDF = windyDF.iloc[:,-1] # only 1 column taking (protecting from dummy variable.)
+playDF = playDF.iloc[:,-1] # only 1 column taking (protecting from dummy variable.)
 
 completed_data = pd.concat([outlookDF, tempDF, humidityDF], axis = 1) # completed data.
 
